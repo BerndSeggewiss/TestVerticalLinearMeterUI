@@ -39,7 +39,6 @@ namespace WpfAppChartDirectorLinearMeter
             m.addColorScale(smoothColorScale);
             m.addPointer(voltage, 0x0000cc);
             WPFChartViewer1.Chart = m;
-
             VoltageText.Text = $"{voltage:F3} V";
         }
 
@@ -80,7 +79,6 @@ namespace WpfAppChartDirectorLinearMeter
                     serialPort.NewLine = "\n";
                     serialPort.DataReceived += SerialPort_DataReceived;
                     serialPort.Open();
-
                     isConnected = true;
                     ConnectButton.Content = "Disconnect";
                     PortCombo.IsEnabled = false;
@@ -147,4 +145,5 @@ namespace WpfAppChartDirectorLinearMeter
             base.OnClosing(e);
         }
     }
+
 }
